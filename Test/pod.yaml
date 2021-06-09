@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pod1
+spec:
+  containers:
+    - name: test-container
+      image: ubuntu:18.04
+      workingDir: /Users/test
+      command: ['sleep', 'infinity']
+      volumeMounts:
+        - name: data
+          mountPath: /Users/test
+  volumes:
+    - name: data
+      persistentVolumeClaim:
+        claimName: test-pvc

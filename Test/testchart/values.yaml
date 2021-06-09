@@ -1,0 +1,7 @@
+metadata:
+  namespace: suneel-baf
+  counter: 
+
+storage:
+  storageclassname: test-sc
+  storagesize: 512Mi
